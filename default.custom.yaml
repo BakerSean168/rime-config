@@ -1,0 +1,9 @@
+# Rime 用户覆盖配置：只启用雾凇全拼，减少方案切换干扰。
+patch:
+  schema_list:
+    - schema: rime_ice
+  "menu/page_size": 5
+  "switcher/fold_options": false
+  "ascii_composer/switch_key/Caps_Lock": clear
+  "ascii_composer/switch_key/Shift_L": commit_code
+  "ascii_composer/switch_key/Shift_R": noop

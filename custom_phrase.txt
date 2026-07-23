@@ -1,0 +1,8 @@
+# Rime table
+# coding: utf-8
+#@/db_name custom_phrase.txt
+#@/db_type tabledb
+#
+# 私人短语：在本行之后添加内容。每行格式为：短语<Tab>编码<Tab>权重
+# 例如：
+# your-email@example.com<Tab>youjian<Tab>100

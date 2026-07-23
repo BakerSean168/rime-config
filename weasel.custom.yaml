@@ -1,0 +1,35 @@
+# 小狼毫用户覆盖配置：终端默认英文，图形应用保持中文输入体验。
+patch:
+  "style/color_scheme": purity_of_form_custom
+  "style/color_scheme_dark": nord
+  "style/font_face": "Segoe UI, Microsoft YaHei, Segoe UI Emoji"
+  "style/label_font_face": "Microsoft YaHei"
+  "style/comment_font_face": "Microsoft YaHei"
+  "style/font_point": 14
+  "style/label_font_point": 14
+  "style/comment_font_point": 13
+  "style/inline_preedit": true
+  "style/horizontal": true
+  "style/display_tray_icon": false
+  "style/candidate_abbreviate_length": 30
+  "style/border_width": 2
+  "style/corner_radius": 8
+  "style/round_corner": 8
+  "style/margin_x": 8
+  "style/margin_y": 8
+  "style/candidate_spacing": 22
+  "app_options/windowsterminal.exe":
+    ascii_mode: true
+    vim_mode: true
+  "app_options/wt.exe":
+    ascii_mode: true
+    vim_mode: true
+  "app_options/pwsh.exe":
+    ascii_mode: true
+  "app_options/powershell.exe":
+    ascii_mode: true
+  "app_options/mintty.exe":
+    ascii_mode: true
+  "app_options/nvim-qt.exe":
+    ascii_mode: true
+    vim_mode: true

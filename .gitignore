@@ -1,0 +1,18 @@
+# Rime 自动生成的部署与学习数据
+*.bin
+*.userdb/
+*.userdb.kct
+*.userdb.txt
+build/
+sync/
+installation.yaml
+
+# 雾凇拼音本体由上游项目维护，不复制到此仓库
+*.schema.yaml
+*.dict.yaml
+lua/
+opencc/
+others/
+
+# 本机临时备份
+*.bak
