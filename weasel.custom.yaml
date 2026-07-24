@@ -1,7 +1,21 @@
 # 小狼毫用户覆盖配置：终端默认英文，图形应用保持中文输入体验。
 patch:
-  "style/color_scheme": purity_of_form_custom
-  "style/color_scheme_dark": nord
+  "preset_color_schemes/nord_night":
+    name: "Nord Night"
+    author: "Personal Rime configuration"
+    back_color: 0x40342e
+    border_color: 0x40342e
+    text_color: 0xe9ded8
+    candidate_text_color: 0xf0e9e5
+    comment_text_color: 0xbbbc8f
+    label_color: 0xd0c088
+    hilited_text_color: 0xf4efec
+    hilited_back_color: 0x40342e
+    hilited_candidate_text_color: 0x40342e
+    hilited_candidate_back_color: 0xd0c088
+    hilited_comment_text_color: 0x52423b
+  "style/color_scheme": nord_night
+  "style/color_scheme_dark": nord_night
   "style/font_face": "Segoe UI, Microsoft YaHei, Segoe UI Emoji"
   "style/label_font_face": "Microsoft YaHei"
   "style/comment_font_face": "Microsoft YaHei"
