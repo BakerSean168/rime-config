@@ -11,12 +11,24 @@
 ## Windows 同步
 
 1. 安装小狼毫与雾凇拼音本体。
-2. 将本仓库中的三个配置文件复制到 `%AppData%\Rime`。
-3. 右键小狼毫状态图标，选择“重新部署”。
+2. 在 PowerShell 中运行仓库自带的安装器：
 
 ```powershell
-Copy-Item .\default.custom.yaml, .\weasel.custom.yaml, .\custom_phrase.txt "$env:APPDATA\Rime" -Force
-& 'C:\Program Files\Rime\weasel-0.17.4\WeaselDeployer.exe' /deploy
+.\install.ps1
+```
+
+安装器只管理 `default.custom.yaml`、`weasel.custom.yaml` 和 `custom_phrase.txt`：它们会被复制到 `%AppData%\Rime`，随后自动查找已安装的小狼毫 `WeaselDeployer.exe` 并执行 `/deploy`。不会删除学习数据、雾凇拼音本体或其他 Rime 文件。
+
+如只需要同步文件而暂不重新部署：
+
+```powershell
+.\install.ps1 -SkipDeploy
+```
+
+若小狼毫安装在非标准目录，可显式传入：
+
+```powershell
+.\install.ps1 -WeaselDeployer 'D:\Apps\Rime\weasel-x.y.z\WeaselDeployer.exe'
 ```
 
 ## 约定

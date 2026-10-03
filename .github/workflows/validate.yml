@@ -1,0 +1,26 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  windows-install:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Exercise non-destructive Windows install path
+        shell: pwsh
+        run: |
+          $destination = Join-Path $env:RUNNER_TEMP 'Rime'
+          ./install.ps1 -Destination $destination -SkipDeploy
+          foreach ($name in 'default.custom.yaml', 'weasel.custom.yaml', 'custom_phrase.txt') {
+            $source = Get-FileHash (Join-Path $PWD $name) -Algorithm SHA256
+            $installed = Get-FileHash (Join-Path $destination $name) -Algorithm SHA256
+            if ($source.Hash -ne $installed.Hash) {
+              throw "Installed file hash mismatch: $name"
+            }
+          }
